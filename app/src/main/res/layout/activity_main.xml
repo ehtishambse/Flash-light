@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimaryDark"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        >
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_more"
+            android:id="@+id/jmpBTN"
+
+            />
+
+        <Button
+            android:id="@+id/buttonSwitch"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:src="@drawable/offbutton"
+            android:background="@drawable/offbutton"
+            android:layout_centerInParent="true"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Screen"
+            android:textColor="#a4a4a4"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_horizontal">
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Screen"
+                android:textColor="#a4a4a4"
+                android:background="@drawable/rounded_btn"
+                android:onClick="jumBTN"
+                android:layout_marginRight="10dp"
+                />
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Strobe"
+                android:layout_marginLeft="10dp"
+                android:textColor="#a4a4a4"
+                android:background="@drawable/rounded_btn"
+                android:onClick="jumpSiren"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="100%"
+            android:textColor="#a4a4a4"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/buttonSwitch"
+            android:layout_marginBottom="60dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:background="@drawable/rounded_btn"
+            android:id="@+id/batteryLevel"
+            />
+
+
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8863088720647115/4696899544">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>
+
